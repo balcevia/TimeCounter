@@ -1,4 +1,4 @@
-package com.balcewicz.timeCounter;
+package com.balcewicz.timecounter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
