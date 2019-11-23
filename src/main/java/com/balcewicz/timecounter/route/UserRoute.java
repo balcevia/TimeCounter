@@ -1,7 +1,6 @@
-package com.balcewicz.timecounter.functionalconfig;
+package com.balcewicz.timecounter.route;
 
-import com.balcewicz.timecounter.model.api.ApiUser;
-import com.balcewicz.timecounter.service.UserService;
+import com.balcewicz.timecounter.handler.UserHandler;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,17 +9,15 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
-import static org.springframework.web.reactive.function.server.ServerResponse.ok;
 
 @Configuration
 @AllArgsConstructor
-public class UserFunctionalConfig {
+public class UserRoute {
 
-    private final UserService userService;
+    private static final String URI = "/users";
 
     @Bean
-    RouterFunction<ServerResponse> composedRoutes() {
-        return route(GET("/users"),
-                request -> ok().body(userService.fetchAllUsers(), ApiUser.class));
+    RouterFunction<ServerResponse> composedUsersRoutes(final UserHandler handler) {
+        return route(GET(URI), handler::fetchAllUsers);
     }
 }
