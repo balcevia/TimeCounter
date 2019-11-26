@@ -20,9 +20,9 @@ public class UserPostRequest {
     private String username;
     @NotEmpty
     @PasswordConstraint
-    private CharSequence password;
+    private String password;
     @NotEmpty
-    private CharSequence confirmation;
+    private String confirmation;
     @NotEmpty
     private Set<Role> roles;
 }
