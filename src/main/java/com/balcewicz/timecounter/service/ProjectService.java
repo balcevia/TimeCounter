@@ -14,7 +14,6 @@ import reactor.core.publisher.Mono;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -31,13 +30,13 @@ public class ProjectService {
     public Mono<Project> updateProject(ProjectPutRequest project) {
         return projectRepository.findById(project.getId()).map(p ->
                 new Project(p.getId(), project.getName(), p.getCreationDate(), project.getDescription(), project.getUserIds()))
-        .flatMap(projectRepository::save);
+                .flatMap(projectRepository::save);
     }
 
     public Flux<ApiProject> fetchAllProjects() {
         return projectRepository.findAll().flatMap(project -> userRepository.findAllById(project.getUserIds())
-                    .map(ApiUser::apply).collectList()
-                    .map(HashSet::new)
-                    .map(users -> ApiProject.apply(project, users)));
+                .map(ApiUser::apply).collectList()
+                .map(HashSet::new)
+                .map(users -> ApiProject.apply(project, users)));
     }
 }
