@@ -10,6 +10,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PasswordConfirmationConstraint {
     String message() default "Passwords should match";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }
