@@ -1,6 +1,6 @@
 package com.balcewicz.timecounter.model.putrequest;
 
-import com.balcewicz.timecounter.model.EntityWithPassword;
+import com.balcewicz.timecounter.model.RequestWithPassword;
 import com.balcewicz.timecounter.model.Role;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
 @NoArgsConstructor
-public class UserPutRequest extends EntityWithPassword {
+public class UserPutRequest extends RequestWithPassword {
     @NotEmpty
     private String id;
     @NotEmpty
@@ -21,8 +21,8 @@ public class UserPutRequest extends EntityWithPassword {
         this.id = id;
         this.username = username;
         this.roles = roles;
-        super.setPassword(password);
-        super.setConfirmation(confirmation);
+        this.setPassword(password);
+        this.setConfirmation(confirmation);
     }
 
     public String getId() {
