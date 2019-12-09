@@ -1,7 +1,7 @@
 package com.balcewicz.timecounter.handler;
 
 
-import com.balcewicz.timecounter.model.putrequest.ProjectPutRequest;
+import com.balcewicz.timecounter.model.request.putrequest.ProjectPutRequest;
 import com.balcewicz.timecounter.service.ProjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;

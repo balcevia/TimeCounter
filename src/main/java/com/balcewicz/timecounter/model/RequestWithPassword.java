@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 @Getter
 @Setter
 @PasswordConfirmationConstraint
-public abstract class EntityWithPassword {
+public abstract class RequestWithPassword {
 
     @NotEmpty
     @PasswordConstraint

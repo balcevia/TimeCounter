@@ -1,4 +1,4 @@
-package com.balcewicz.timecounter.model.putrequest;
+package com.balcewicz.timecounter.model.request.postrequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,9 +10,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class ProjectPutRequest {
-    @NotEmpty
-    private String id;
+public class ProjectPostRequest {
     @NotEmpty
     private String name;
     @NotEmpty
