@@ -2,8 +2,8 @@ package com.balcewicz.timecounter.service;
 
 import com.balcewicz.timecounter.model.User;
 import com.balcewicz.timecounter.model.api.ApiUser;
-import com.balcewicz.timecounter.model.postrequest.UserPostRequest;
-import com.balcewicz.timecounter.model.putrequest.UserPutRequest;
+import com.balcewicz.timecounter.model.request.postrequest.UserPostRequest;
+import com.balcewicz.timecounter.model.request.putrequest.UserPutRequest;
 import com.balcewicz.timecounter.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

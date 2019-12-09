@@ -1,7 +1,7 @@
 package com.balcewicz.timecounter.model;
 
-import com.balcewicz.timecounter.model.postrequest.UserPostRequest;
-import com.balcewicz.timecounter.model.putrequest.UserPutRequest;
+import com.balcewicz.timecounter.model.request.postrequest.UserPostRequest;
+import com.balcewicz.timecounter.model.request.putrequest.UserPutRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
