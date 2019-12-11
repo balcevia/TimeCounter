@@ -2,7 +2,6 @@ package com.balcewicz.timecounter.handler;
 
 import com.balcewicz.timecounter.model.request.WorkSessionRequest;
 import com.balcewicz.timecounter.service.WorkSessionService;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Validator;
 import org.springframework.web.reactive.function.server.ServerRequest;
