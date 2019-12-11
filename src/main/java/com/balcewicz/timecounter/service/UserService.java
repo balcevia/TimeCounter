@@ -28,4 +28,8 @@ public class UserService {
         return userRepository.save(User.apply(request));
     }
 
+    public Mono<User> fetchByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
 }
